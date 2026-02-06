@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CityConnect platform overview</title>
+<link rel="preload" href="fonts/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuFpm5ww.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymu8Z65ww.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHeem.ttf" as="font" type="font/ttf" crossorigin>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b50da",
+                        "accent": "#0d9488", // Teal accent
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "navy-dark": "#0f172a",
+                        "slate-mid": "#64748b",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2230",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex h-16 items-center justify-between px-4 sm:px-8 lg:px-40 max-w-[1440px] mx-auto">
+<a href="index.html" class="hover:opacity-80 transition-opacity">
+<div class="flex items-center gap-2">
+<div class="text-primary size-8 flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor"><path d="M200-120v-560h160v-160h400v720H200Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">CityConnect <span class="font-normal">by Resilient</span></span>
+</div>
+</a>
+<!-- Desktop Menu -->
+<nav class="hidden lg:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-6 xl:gap-9">
+<a class="text-sm font-bold leading-normal text-primary dark:text-white" href="platform.html">Platform</a>
+<a class="text-sm font-medium leading-normal text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="councils.html">For Councils</a>
+<a class="text-sm font-medium leading-normal text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="pilot.html">Pilot Program</a>
+<a class="text-sm font-medium leading-normal text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="about.html">About</a>
+</div>
+<a href="mailto:cityconnect@resilient.xyz" class="flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white transition-all hover:bg-blue-700">
+                        Request a Council Briefing
+                    </a>
+</nav>
+<!-- Mobile Menu Button (Placeholder) -->
+<button class="lg:hidden text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<section class="flex flex-col items-center justify-center w-full px-4 py-12 md:px-10 lg:px-40 lg:py-16">
+<div class="flex flex-col max-w-[960px] w-full gap-8">
+<div class="relative w-full overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat h-[400px] md:h-[480px] shadow-lg" style='background-image: linear-gradient(rgba(11, 80, 218, 0.45) 0%, rgba(16, 22, 34, 0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6jY_PZPxI6weKkExqnEz9q7gbsxgZNpv-nRKubO79cURWjhXmbqO4Hz3brBlcMJ7xoxuFAmFmtVLeGf4XCHo1az8lw34NbnNVjwo0zpeSHXpHD0umDT0q0Wsxm14UB1L3ukYKS2MNSGSYOSJu1noyhdOPdg2uA3aFjlCVRW61IxN9TWE3tqvZ4tQjgseEMpxx-vvgnfzi9Pflhlga-IBxrkP3IqdYoMbN4kiASB2PatLJ4UcjsHd1A7ytLqBYSboD9Kiy9JnEIOi5");'>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+<span class="mb-4 inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-xs font-medium text-blue-100 backdrop-blur-sm border border-blue-400/30">
+                        Platform Overview
+                    </span>
+<h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-4 max-w-2xl">
+                        CityConnect platform overview
+                    </h1>
+<h2 class="text-blue-100 text-sm md:text-lg font-normal leading-relaxed max-w-xl mb-8">
+                        A council-controlled coordination layer for emerging city technologies — designed to integrate with existing systems, support operational visibility, and scale as new services come online.
+                    </h2>
+<div class="flex flex-col sm:flex-row gap-4">
+                        <a href="mailto:cityconnect@resilient.xyz" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg hover:bg-blue-600 transition-colors">
+                            Request a technical overview
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col items-center w-full px-4 md:px-10 lg:px-40 py-16 bg-slate-50 dark:bg-slate-900/20 border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col max-w-[960px] w-full">
+<div class="mb-12 text-center">
+<h2 class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-tight mb-4">
+                    Design principles
+                </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto">
+                    CityConnect is designed to give councils a safe, practical way to coordinate emerging technologies without replacing existing systems. It prioritises council control, integration-first delivery, and clear operational boundaries between the city and external operators.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+<div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-700 -z-10"></div>
+<div class="flex flex-col items-center text-center group">
+<div class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-full p-1 mb-4 shadow-sm z-10 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">router</span>
+</div>
+</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Council control</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                            Councils define the rules, the map context, and what is approved to operate — with clear governance and auditability.
+                    </p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-full p-1 mb-4 shadow-sm z-10 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">storage</span>
+</div>
+</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Integration-first</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                            Designed to integrate with existing council systems, approved vendor platforms, and future sensors through a controlled interface.
+                    </p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-full p-1 mb-4 shadow-sm z-10 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">map</span>
+</div>
+</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Operational visibility</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                            A shared operational view that helps teams and partners coordinate during day-to-day operations and incidents.
+                    </p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-full p-1 mb-4 shadow-sm z-10 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">integration_instructions</span>
+</div>
+</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Clear boundaries</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                            Separation between council oversight and operator systems — enabling coordination without handing over control of city operations.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col items-center w-full px-4 md:px-10 lg:px-40 py-12">
+<div class="flex flex-col max-w-[960px] w-full">
+<div class="pb-6">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-tight">Data Topology &amp; Flow</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2">From approved sources to council visibility and coordinated service delivery.</p>
+</div>
+<div class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl p-6 md:p-10 shadow-sm">
+<div class="flex flex-col lg:flex-row items-stretch justify-between gap-6 relative">
+
+  <!-- Card 1: Data Ingestion Service (mentions approved sources) -->
+  <div class="flex flex-col items-center flex-1 z-10">
+    <div class="h-full w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
+      <div class="p-3 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full mb-4">
+        <span class="material-symbols-outlined">sync_alt</span>
+      </div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2">Data Ingestion Service</h3>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Receives approved inputs (council systems, approved partners, and sensors where relevant) and passes validated operational data forward through a controlled interface.
+      </p>
+      <div class="mt-auto pt-4 flex gap-2">
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Controlled</span>
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Validated</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow 1 -->
+  <div class="hidden lg:flex flex-col justify-center items-center text-slate-300 dark:text-slate-600">
+    <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+  </div>
+  <div class="lg:hidden flex justify-center items-center text-slate-300 dark:text-slate-600">
+    <span class="material-symbols-outlined text-4xl rotate-90">arrow_forward</span>
+  </div>
+
+  <!-- Card 2: Connect (Highlighted) -->
+  <div class="flex flex-col items-center flex-1 z-10">
+    <div class="h-full w-full bg-white dark:bg-gray-800 border-2 border-primary/20 rounded-lg p-5 flex flex-col items-center text-center shadow-lg relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+      <div class="p-3 bg-primary text-white rounded-full mb-4 shadow-md">
+        <span class="material-symbols-outlined">memory</span>
+      </div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2">Connect</h3>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+        Applies council context and operational rules before publishing approved operational data onward.
+      </p>
+      <div class="mt-auto pt-4 flex gap-2">
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Context</span>
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Rules</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow 2 -->
+  <div class="hidden lg:flex flex-col justify-center items-center text-slate-300 dark:text-slate-600">
+    <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+  </div>
+  <div class="lg:hidden flex justify-center items-center text-slate-300 dark:text-slate-600">
+    <span class="material-symbols-outlined text-4xl rotate-90">arrow_forward</span>
+  </div>
+
+  <!-- Card 3: Commercial Operator Hub -->
+  <div class="flex flex-col items-center flex-1 z-10">
+    <div class="h-full w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-5 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
+      <div class="p-3 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full mb-4">
+        <span class="material-symbols-outlined">monitoring</span>
+      </div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2">Operator Hub</h3>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Provides a shared operational view for councils and commercial autonomous vehicle, robotics, and drone operators using approved operational data.
+      </p>
+      <div class="mt-auto pt-4 flex gap-2">
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">APIs</span>
+        <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Reporting</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col items-center w-full px-4 md:px-10 lg:px-40 py-12 bg-slate-50 dark:bg-slate-900/20">
+<div class="flex flex-col max-w-[960px] w-full">
+<div class="flex items-center justify-between pb-8">
+                <h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-tight">Platform capabilities</h2>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow group">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">dns</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 dark:bg-slate-800 dark:text-slate-500 px-2 py-1 rounded">Core</span>
+</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Council context &amp; rules</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                    Council-owned map context and operational rules, forming the foundation for oversight, coordination, and safe enablement of new services.
+                    </p>
+<ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Council-controlled configuration</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Operational rule foundations</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow group">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">view_in_ar</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 dark:bg-slate-800 dark:text-slate-500 px-2 py-1 rounded">Visual Context</span>
+</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Digital twin</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                    A council-aligned digital twin view that supports situational awareness and shared coordination using approved geospatial context.
+                    </p>
+<ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Council geospatial alignment</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Standards-aware integration</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow group">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 dark:bg-slate-800 dark:text-slate-500 px-2 py-1 rounded">Interfaces</span>
+</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Commercial operator coordination</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                    A separate coordination service for managing commercial operators and activity across multiple council areas, with clear separation between council oversight and operator workflows.
+                    </p>
+<ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Multi-council coordination</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Controlled operator access</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow group">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">security_update_warning</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 dark:bg-slate-800 dark:text-slate-500 px-2 py-1 rounded">Automation</span>
+</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Incidents &amp; exceptions</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                    Supports operational exceptions such as temporary restrictions and incident coordination — with deeper automation and simulation available through council engagement.
+                    </p>
+<ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Temporary restrictions support</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> Incident coordination support</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col items-center w-full px-4 md:px-10 lg:px-40 py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col max-w-[960px] w-full gap-10">
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Interoperability &amp; Open Standards</h4>
+<div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+  <div class="flex items-center gap-2 font-bold text-lg text-slate-800 dark:text-slate-300 whitespace-nowrap">
+    <span class="material-symbols-outlined">api</span>
+    <span>API-first integration</span>
+  </div>
+
+  <div class="flex items-center gap-2 font-bold text-lg text-slate-800 dark:text-slate-300 whitespace-nowrap">
+    <span class="material-symbols-outlined">public</span>
+    <span>GIS-aligned data</span>
+  </div>
+
+  <div class="flex items-center gap-2 font-bold text-lg text-slate-800 dark:text-slate-300 whitespace-nowrap">
+    <span class="material-symbols-outlined">monitoring</span>
+    <span>Operational visibility</span>
+  </div>
+
+  <div class="flex items-center gap-2 font-bold text-lg text-slate-800 dark:text-slate-300 whitespace-nowrap">
+    <span class="material-symbols-outlined">hub</span>
+    <span>Event &amp; telemetry streams</span>
+  </div>
+
+  <div class="flex items-center gap-2 font-bold text-lg text-slate-800 dark:text-slate-300 whitespace-nowrap">
+    <span class="material-symbols-outlined">verified_user</span>
+    <span>Governance &amp; audit</span>
+  </div>
+</div>
+</div>
+<div class="mt-8 border rounded-lg border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-surface-dark overflow-hidden">
+<div class="bg-slate-50 dark:bg-slate-900/50 px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center cursor-pointer">
+<h3 class="font-bold text-slate-900 dark:text-white">Architecture Specifications</h3>
+<span class="material-symbols-outlined text-slate-400">expand_less</span>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">Modular Framework</h4>
+<div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-sm text-slate-600 dark:text-slate-400">Core Engine</span>
+                                <span class="text-sm font-medium text-slate-900 dark:text-white">CityConnect core (briefing provided)</span>
+</div>
+<div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-sm text-slate-600 dark:text-slate-400">Deployment</span>
+                                <span class="text-sm font-medium text-slate-900 dark:text-white text-right max-w-[320px] leading-snug">On-prem / private cloud / hybrid<br>(data-sovereignty, offline-capable)</span>
+</div>
+<div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-sm text-slate-600 dark:text-slate-400">Branding</span>
+                                <span class="text-sm font-medium text-slate-900 dark:text-white">Council-branded deployments</span>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">Interoperability</h4>
+<div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-sm text-slate-600 dark:text-slate-400">API Standard</span>
+                                <span class="text-sm font-medium text-slate-900 dark:text-white">API-first integration approach</span>
+</div>
+<div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-sm text-slate-600 dark:text-slate-400">Auth Protocols</span>
+                                <span class="text-sm font-medium text-slate-900 dark:text-white">SSO options by environment</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="sticky bottom-0 z-40 w-full border-t border-slate-200 dark:border-slate-800 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur py-4 px-6 md:px-40 flex justify-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 w-full max-w-[960px]">
+<div class="flex flex-col">
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Want to assess technical fit?</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Request a council-facing technical overview covering integration boundaries, deployment options, and operational workflows.</span>
+</div>
+<div class="flex gap-4">
+<a href="mailto:cityconnect@resilient.xyz" class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:bg-blue-600 transition-colors">
+                    Request a Council Briefing
+                </a>
+</div>
+</div>
+</div>
+<footer class="border-t border-slate-200 bg-background-light py-12 dark:border-slate-800 dark:bg-background-dark">
+<div class="mx-auto flex max-w-[960px] flex-col gap-8 px-4 sm:px-8 lg:px-0">
+<div class="flex flex-col justify-between gap-8 md:flex-row md:items-start">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor"><path d="M200-120v-560h160v-160h400v720H200Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>
+</div>
+<span class="text-lg font-bold">CityConnect <span class="font-normal">by Resilient</span></span>
+</div>
+<p class="max-w-xs text-sm text-slate-500 dark:text-slate-400">
+                            Australian-designed smart-city operating system. Built for practitioners, by practitioners.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-8 sm:grid-cols-2">
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Product</h4>
+<a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="platform.html">Platform</a>
+<a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="pilot.html">Pilot Program</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Company</h4>
+<a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="about.html">About</a>
+<!-- <a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Careers</a> -->
+<!-- <a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Contact</a> -->
+</div>
+<!-- <div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Legal</h4>
+<a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Privacy</a>
+<a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Terms</a>
+</div> -->
+</div>
+</div>
+<div class="flex flex-col justify-between gap-4 border-t border-slate-200 pt-8 dark:border-slate-800 sm:flex-row sm:items-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2026 CityConnect by Resilient. All rights reserved.</p>
+<div class="flex gap-4">
+<!-- <a class="text-slate-400 hover:text-slate-900 dark:hover:text-white" href="#"><span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-slate-900 dark:hover:text-white" href="#"><span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a> -->
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

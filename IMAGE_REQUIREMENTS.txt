@@ -1,0 +1,48 @@
+Image Requirements for CityConnect Promotional Website
+
+The following images are currently hosted externally and need to be replaced with local assets.
+Please provide images with the specified dimensions (or similar aspect ratios) and place them in the `Web/img/` directory.
+
+1. Platform Page - Hero Background
+   - Location: Web/platform.html
+   - Context: Main banner for the Architecture/Platform page.
+   - Current Source: https://lh3.googleusercontent.com/aida-public/AB6AXuA6jY_PZPxI6weKkExqnEz9q7gbsxgZNpv-nRKubO79cURWjhXmbqO4Hz3brBlcMJ7xoxuFAmFmtVLeGf4XCHo1az8lw34NbnNVjwo0zpeSHXpHD0umDT0q0Wsxm14UB1L3ukYKS2MNSGSYOSJu1noyhdOPdg2uA3aFjlCVRW61IxN9TWE3tqvZ4tQjgseEMpxx-vvgnfzi9Pflhlga-IBxrkP3IqdYoMbN4kiASB2PatLJ4UcjsHd1A7ytLqBYSboD9Kiy9JnEIOi5
+   - Suggested Filename: platform-hero.jpg
+   - Suggested Dimensions: 1920x600 px (Landscape)
+   - Style: Dark/Technological, Abstract city data or connectivity.
+
+2. Councils Page - Hero Image
+   - Location: Web/councils.html
+   - Context: "Operational Clarity" section, showing an operations center.
+   - Current Source: https://lh3.googleusercontent.com/aida-public/AB6AXuD7CqwqHti4cVLclC-T-VBFCoMiMJOz7aA4yprxy2oSSzkj8riLjqiDKV_G4LlpNQl3om5R-x8ivXOXjqVJ1b3Utyxywdf98tRN28E_HRzCOwtTru9yX1gSKYT8hia5JpVsteOPz03ociURRMapc_XSEoM9cpxCu9QKRSqMDC6WH_XnbUMiHDqjR5YgmDwRSsbvRwC0sEMmeCr1maGzgf9G4zPFSSFoo_qBRAme_XyzTo8uRHM1FcsULISpihVJGNYjmSaCRvv_ens_
+   - Suggested Filename: councils-ops-center.jpg
+   - Suggested Dimensions: 800x600 px (4:3 Aspect Ratio)
+   - Style: Modern operations centre, screens showing maps/data.
+
+3. Councils Page - Dashboard Detail
+   - Location: Web/councils.html
+   - Context: "Flood & Fire Monitoring Dashboard" section.
+   - Current Source: https://lh3.googleusercontent.com/aida-public/AB6AXuCDTwhHAD1Pu4setfsB3G6AuyoEZnwy9uxZ8TsA8Wtr53FJ7fvjNZMZEcoCAxqD5o1yhF-TofC3txDR7S6n5xzyym4M5xmjVZoLbl1ptt9J7RUwPhQMyOZOd5lFJBTG6D1dt9o7dI4m0J-q1ItkVwspfLCSwesaIYcF6MNyEVsqaQ8asy9xyQ7RfalBKJ0e92bMC0FE5u7pgyL9WlKxJL44Dc_FQdNsjTWJlyBLgACz_QdaXnoNw9OM9ctgV4EL4xcF_CakGWrFvtJ4
+   - Suggested Filename: councils-dashboard.jpg
+   - Suggested Dimensions: 800x600 px
+   - Style: Software UI screenshot, dashboard, map visualization.
+
+4. Pilot Page - Hero Background
+   - Location: Web/pilot.html
+   - Context: "De-risk Smart City Adoption" section.
+   - Current Source: https://lh3.googleusercontent.com/aida-public/AB6AXuCXVw89GoFMkOQNr1GO0aSRgnKZj0owpvy3CqoOIK71Rs1b2voXrLQe_4MT8SRwrVRnAzuUkYKfjzhYDQu9RAw8lrxlcYFUiDdFeWPPhXKvBP2IxJxwBhNiffQzK3vjrW4Mzj-rBH22p2I7VnIhAzlNUtuKXezBZFZejbwRz28Ne_3dyvfoAykGBSEeBoRSsH5KZhBwnndGD9fzWs6m0l91WT6IAhMNrm8_aFGutCNpZ2N_0OroE7DrAM0A9YeVIsSyxX_DrqxSZeGF
+   - Suggested Filename: pilot-hero.jpg
+   - Suggested Dimensions: 800x600 px (4:3 Aspect Ratio)
+   - Style: Clean modern city park or street view (Aerial).
+
+5. About Page - Hero Image
+   - Location: Web/about.html
+   - Context: "Australian Design. Global Standard." section.
+   - Current Source: https://lh3.googleusercontent.com/aida-public/AB6AXuCZce07O3htqLcOvv_NMO6y0siWCXCOfxCCbC4sh0WFlx2zrXAGXsZKAItZ3zpXyVcOftDxp9Ps6vQsT0JsLm7nxffyhVdPklDp29pImZNfiTEGr8O5VlNLH7E7YanhhqTeQ72HlpyBb5oHCZLOSzilm2RNA2HNyl-CUBBByCqFsnisQeUHyvN4iZEjqDz_VJdS28KOTUpkQjEQD7F9QnjpbvFXKmpvMNigXvRfqvO8i-bYvKFMK4KQDarhaYTox1B6uAysqCTIkM-Z
+   - Suggested Filename: about-hero.jpg
+   - Suggested Dimensions: 800x600 px (4:3 Aspect Ratio)
+   - Style: Abstract aerial view of infrastructure/architecture.
+
+Note:
+- Place files in `Web/img/`.
+- Update the HTML `src` or `style` attributes to point to the new local paths (e.g., `style="background-image: url('img/platform-hero.jpg')"`).
