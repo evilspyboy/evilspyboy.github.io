@@ -224,10 +224,10 @@
 <h2 class="text-[#0d121c] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-2">How CityConnect benefits the city</h2>
 <div class="border-b border-slate-200 dark:border-slate-700">
 <div class="flex gap-8 overflow-x-auto no-scrollbar">
-<button type="button" data-tab="emergency" aria-controls="tab-emergency" aria-selected="true" class="group flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 px-2 cursor-pointer text-primary transition-all">
+<button type="button" data-tab="permits" aria-controls="tab-permits" aria-selected="true" class="group flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 px-2 cursor-pointer text-primary transition-all">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xl">emergency</span>
-<span class="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Emergency Management</span>
+<span class="material-symbols-outlined text-xl">assignment</span>
+<span class="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Permits &amp; Planning</span>
 </div>
 </button>
 <button type="button" data-tab="infrastructure" aria-controls="tab-infrastructure" aria-selected="false" class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-slate-300 pb-3 px-2 cursor-pointer transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
@@ -236,40 +236,40 @@
 <span class="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Infrastructure</span>
 </div>
 </button>
-<button type="button" data-tab="permits" aria-controls="tab-permits" aria-selected="false" class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-slate-300 pb-3 px-2 cursor-pointer transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+<button type="button" data-tab="emergency" aria-controls="tab-emergency" aria-selected="false" class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-slate-300 pb-3 px-2 cursor-pointer transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xl">assignment</span>
-<span class="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Permits &amp; Planning</span>
+<span class="material-symbols-outlined text-xl">emergency</span>
+<span class="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Emergency Management</span>
 </div>
 </button>
 </div>
 </div>
 
-<div id="tab-emergency" class="tab-panel bg-white dark:bg-[#1a2234] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 mt-4 flex flex-col lg:flex-row">
+<div id="tab-permits" class="tab-panel bg-white dark:bg-[#1a2234] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 mt-4 flex flex-col lg:flex-row">
 <div class="p-8 lg:w-1/2 flex flex-col justify-center gap-6">
 <div>
-<h3 class="text-2xl font-bold text-[#0d121c] dark:text-white mb-2">Flood, fire and severe weather coordination</h3>
+<h3 class="text-2xl font-bold text-[#0d121c] dark:text-white mb-2">Enabling new services and economies</h3>
 <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-Support coordinated response and clearer situational awareness during fast-moving incidents by unifying live feeds and council context.
+Enable new services and emerging industries to operate in the city with clarity, fairness, and community confidence — creating pathways for sustainable local economic growth and new, transparent revenue sources that support city services over time.
 </p>
 </div>
 <ul class="flex flex-col gap-3">
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Shared situational picture across teams and partners</span>
+<span>Council-defined operating expectations and zones</span>
 </li>
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Faster decisions using consistent map context</span>
+<span>Lower-risk introduction of new services</span>
 </li>
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Traceable records for post-incident review</span>
+<span>Support local economic activity through enablement</span>
 </li>
 </ul>
 </div>
 <div class="lg:w-1/2 bg-slate-100 dark:bg-slate-800 min-h-[300px] lg:min-h-[450px] relative">
-<div class="absolute inset-4 rounded-lg bg-cover bg-center shadow-lg" data-alt="Data visualization dashboard showing maps and charts" style="background-image: url('img/Bushfire_0.webp');"></div>
+<div class="absolute inset-4 rounded-lg bg-cover bg-center shadow-lg" data-alt="Delivery drone carrying a package" style="background-image: url('img/deliverydrone-au.webp');"></div>
 <!-- <div class="absolute bottom-6 right-6 bg-black/60 text-white text-[10px] px-2 py-1 rounded backdrop-blur-sm pointer-events-none z-10">Illustrative example</div> -->
 </div>
 </div>
@@ -303,31 +303,31 @@ Allow services and technology providers to adapt in the city while creating clea
 </div>
 </div>
 
-<div id="tab-permits" class="tab-panel hidden bg-white dark:bg-[#1a2234] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 mt-4 flex flex-col lg:flex-row">
+<div id="tab-emergency" class="tab-panel hidden bg-white dark:bg-[#1a2234] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 mt-4 flex flex-col lg:flex-row">
 <div class="p-8 lg:w-1/2 flex flex-col justify-center gap-6">
 <div>
-<h3 class="text-2xl font-bold text-[#0d121c] dark:text-white mb-2">Enabling new services and economies</h3>
+<h3 class="text-2xl font-bold text-[#0d121c] dark:text-white mb-2">Flood, fire and severe weather coordination</h3>
 <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-Enable new services and emerging industries to operate in the city with clarity, fairness, and community confidence — creating pathways for sustainable local economic growth and new, transparent revenue sources that support city services over time.
+Support coordinated response and clearer situational awareness during fast-moving incidents by unifying live feeds and council context.
 </p>
 </div>
 <ul class="flex flex-col gap-3">
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Council-defined operating expectations and zones</span>
+<span>Shared situational picture across teams and partners</span>
 </li>
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Lower-risk introduction of new services</span>
+<span>Faster decisions using consistent map context</span>
 </li>
 <li class="flex items-center gap-3 text-[#0d121c] dark:text-slate-200">
 <span class="material-symbols-outlined text-green-600">check_circle</span>
-<span>Support local economic activity through enablement</span>
+<span>Traceable records for post-incident review</span>
 </li>
 </ul>
 </div>
 <div class="lg:w-1/2 bg-slate-100 dark:bg-slate-800 min-h-[300px] lg:min-h-[450px] relative">
-<div class="absolute inset-4 rounded-lg bg-cover bg-center shadow-lg" data-alt="Delivery drone carrying a package" style="background-image: url('img/deliverydrone-au.webp');"></div>
+<div class="absolute inset-4 rounded-lg bg-cover bg-center shadow-lg" data-alt="Data visualization dashboard showing maps and charts" style="background-image: url('img/Bushfire_0.webp');"></div>
 <!-- <div class="absolute bottom-6 right-6 bg-black/60 text-white text-[10px] px-2 py-1 rounded backdrop-blur-sm pointer-events-none z-10">Illustrative example</div> -->
 </div>
 </div>
@@ -468,7 +468,7 @@ Enable new services and emerging industries to operate in the city with clarity,
     }
 
     tabButtons.forEach(b => b.addEventListener("click", () => setActive(b.dataset.tab)));
-    setActive("emergency");
+    setActive("permits");
   })();
 </script>
 </body></html>
